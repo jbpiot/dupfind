@@ -342,7 +342,7 @@ class DupFind
 		if (cpd)
 		{
 			text = "        <file line=\"" + f.tokens[cs.offset].lineNum + "\" path=\"" + f.path + "\"/>";
-			src  = "        <codefragment>\n            " + src.replace("<", "&lt;") + "\n        </codefragment>";
+			src  = "        <codefragment>\n            <![CDATA[" + src + "]]>\n        </codefragment>";
 		}
 		else
 			text = f.path + ", line " + f.tokens[cs.offset].lineNum;
